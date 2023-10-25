@@ -15,7 +15,12 @@ class IsLeapYearTest {
     }
 
     @Test
-    void nonLeapYear() {
+    void nonLeapYearNotDividableWith4() {
         assertFalse(IsLeapYear.isLeapYear(2023));
+    }
+
+    @Test
+    void nonLeapYearDividableWith100ButNot400() {
+        assertFalse(IsLeapYear.isLeapYear(1700));
     }
 }
